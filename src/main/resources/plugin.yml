@@ -1,4 +1,6 @@
-main: com.alihaine.kralipacket.KraliPacket
 name: KraliPacket
+description: ${description}
+version: ${version}
 author: [AliHaine, Krali]
-version: 1.0
+main: com.alihaine.kralipacket.KraliPacket
+api-version: 1.13
