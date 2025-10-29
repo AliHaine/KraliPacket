@@ -45,6 +45,7 @@ public class KraliPacket extends JavaPlugin {
             getLogger().warning("[KraliPacket] Channel " + channel + " is already listened, are you sure about what you are doing ?");
         final KPacket packet = new KPacket(channel, connexionPacket);
         registeredPackets.add(packet);
+        this.getServer().getMessenger().registerOutgoingPluginChannel(this, channel);
         getLogger().info("[KraliPacket] Registered a new packet on the channel " + channel);
         return packet;
     }
