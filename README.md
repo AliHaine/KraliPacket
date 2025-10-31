@@ -13,7 +13,7 @@ A lightweight and modern Minecraft Packet API that simplifies custom plugin mess
 <dependency>
     <groupId>dev.aliyag</groupId>
     <artifactId>KraliPacket</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <scope>provided</scope>
 </dependency>
 ```
@@ -22,7 +22,7 @@ A lightweight and modern Minecraft Packet API that simplifies custom plugin mess
 
 ```kotlin
 dependencies {
-    compileOnly("dev.aliyag:KraliPacket:1.0")
+    compileOnly("dev.aliyag:KraliPacket:1.1")
 }
 ```
 
@@ -30,7 +30,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    compileOnly 'dev.aliyag:KraliPacket:1.0'
+    compileOnly 'dev.aliyag:KraliPacket:1.1'
 }
 ```
 

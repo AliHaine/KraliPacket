@@ -1,0 +1,2 @@
+deep_log: true # log everything that happens
+packet_limit: 100 #max packet per second for a player

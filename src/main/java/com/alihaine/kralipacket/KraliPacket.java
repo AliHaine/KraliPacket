@@ -10,10 +10,18 @@ import java.util.List;
 public class KraliPacket extends JavaPlugin {
     private static KraliPacket kraliPacket;
     private final List<KPacket> registeredPackets = new ArrayList<>();
+    private boolean deepLog;
+    private int packetlLimit;
+
 
     public void onEnable() {
         kraliPacket = this;
+        saveDefaultConfig();
+        this.deepLog = getConfig().getBoolean("deep_log");
+        this.packetlLimit = getConfig().getInt("packet_limit");
         getServer().getPluginManager().registerEvents(new onPlayerConnection(), this);
+        getLogger().info("KraliPacket Deep log: " +  this.deepLog);
+        getLogger().info("KraliPacket max packet per second per player: " +   this.packetlLimit);
         getLogger().info("KraliPacket enabled");
     }
 
@@ -57,4 +65,8 @@ public class KraliPacket extends JavaPlugin {
     }
 
     public static KraliPacket getKraliPacket() { return kraliPacket; }
+
+    public boolean isDeepLog() { return this.deepLog; }
+
+    public int getPacketlLimit() { return this.packetlLimit; }
 }
